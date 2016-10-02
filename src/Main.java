@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Main {
@@ -21,11 +22,11 @@ public class Main {
   }
 
   public static boolean canBuildRandomNote(String[] magazine, String[] note) {
-    HashMap<String, Integer> magazineFreq = getStringFrequency(magazine);
+    Map<String, Integer> magazineFreq = getStringFrequency(magazine);
     return hasEnoughStrings(magazineFreq, note);
   }
 
-  private static boolean hasEnoughStrings(HashMap<String, Integer> magazineFreq,
+  private static boolean hasEnoughStrings(Map<String, Integer> magazineFreq,
       String[] noteWords) {
     for (String word : noteWords) {
       if (!magazineFreq.containsKey(word)) {
